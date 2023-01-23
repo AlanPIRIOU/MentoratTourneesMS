@@ -1,6 +1,6 @@
-package fr.su.mentorataffectationportems.apicontrollers;
+package fr.su.mentorattourneesms.apicontrollers;
 
-import fr.su.mentorataffectationportems.services.MentorataffectationportemsService;
+import fr.su.mentorattourneesms.services.MentoratTourneeMSService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/entrepots/{entrepot}")
-@Tag(name = "Mentorataffectationportems", description = "")
-public class MentorataffectationportemsAPIController {
+@Tag(name = "Mentorattourneems", description = "")
+public class MentoratTourneeMSController {
 
     @Autowired
-    private MentorataffectationportemsService mentorataffectationportemsService;
+    private MentoratTourneeMSService mentoratTourneeMSService;
 
 }

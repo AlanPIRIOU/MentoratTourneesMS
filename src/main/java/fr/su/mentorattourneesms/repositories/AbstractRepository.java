@@ -1,4 +1,4 @@
-package fr.su.mentorataffectationportems.repositories;
+package fr.su.mentorattourneesms.repositories;
 
 import fr.su.back.common.exception.BusinessException;
 import fr.su.back.common.exception.TechnicalException;

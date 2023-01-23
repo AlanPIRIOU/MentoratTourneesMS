@@ -1,4 +1,4 @@
-package fr.su.mentorataffectationportems.repositories;
+package fr.su.mentorattourneesms.repositories;
 
 public class Translater {
 

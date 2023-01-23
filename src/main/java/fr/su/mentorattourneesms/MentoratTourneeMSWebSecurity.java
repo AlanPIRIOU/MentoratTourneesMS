@@ -1,4 +1,4 @@
-package fr.su.mentorataffectationportems;
+package fr.su.mentorattourneesms;
 
 import fr.su.back.api.security.AuthenticationConstantes;
 import fr.su.back.api.security.SecurityConfiguration;
@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true)
 @EnableFeignClients
-public class MentoratAffectationPorteMsWebSecurity extends SecurityConfiguration {
+public class MentoratTourneeMSWebSecurity extends SecurityConfiguration {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
