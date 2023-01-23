@@ -6,7 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 
 
 @Configuration
-public class MentoratAffectationPorteMsApplicationTests {
+public class MentoratTourneeMsApplicationTests {
 	@Configuration
 	@Profile("test")
 	@PropertySource("classpath:env-test.properties")

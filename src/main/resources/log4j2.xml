@@ -4,7 +4,7 @@
     <Properties>
         <Property name="log-level">${env:LOG_LEVEL:-INFO}</Property>
         <Property name="log-pattern">%d [%t]
-            [mentorataffectationportems,%X{X-B3-TraceId},%X{X-B3-SpanId},%X{X-Span-Export}] %-5p %c - %m%n
+            [mentorattourneems,%X{X-B3-TraceId},%X{X-B3-SpanId},%X{X-Span-Export}] %-5p %c - %m%n
         </Property>
     </Properties>
     <Appenders>

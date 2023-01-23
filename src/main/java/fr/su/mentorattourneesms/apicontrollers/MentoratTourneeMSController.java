@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value = "/entrepots/{entrepot}")
-@Tag(name = "Mentorataffectationportems", description = "")
+@Tag(name = "Mentorattourneems", description = "")
 public class MentoratTourneeMSController {
 
     @Autowired

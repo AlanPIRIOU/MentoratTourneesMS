@@ -24,7 +24,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
-        basePackages = "fr.su.mentorataffectationportems.model",
+        basePackages = "fr.su.mentorattourneems.model",
         entityManagerFactoryRef = "multiEntityManager",
         transactionManagerRef = "multiTransactionManager"
 )
@@ -33,7 +33,7 @@ public class PersistenceConfiguration {
 
     private static final Logger LOGGER = LogManager.getLogger(PersistenceConfiguration.class);
 
-    private static final String PACKAGE_SCAN = "fr.su.mentorataffectationportems.model";
+    private static final String PACKAGE_SCAN = "fr.su.mentorattourneems.model";
 
     @Autowired
     private Environment env;

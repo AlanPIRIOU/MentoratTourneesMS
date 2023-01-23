@@ -29,7 +29,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 @EntityScan(basePackageClasses = {MentoratTourneeMSApplication.class, Jsr310JpaConverters.class})
-@EnableFeignClients(basePackages = {"fr.su.mentorataffectationportems", "fr.su.back"})
+@EnableFeignClients(basePackages = {"fr.su.mentorattourneems", "fr.su.back"})
 @EnableCaching
 @OpenAPIDefinition(info = @Info(description = "Cette API...", contact = @Contact(email = "u-gie-iris-pole-sc-etudes-logistique@systeme-u.fr")))
 @SecurityScheme(name = "bearerAuth", type = SecuritySchemeType.HTTP, scheme = "bearer", bearerFormat = "JWT", in = SecuritySchemeIn.HEADER)
