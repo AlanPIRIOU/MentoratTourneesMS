@@ -28,12 +28,12 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-@EntityScan(basePackageClasses = {MentoratAffectationPorteMsApplication.class, Jsr310JpaConverters.class})
+@EntityScan(basePackageClasses = {MentoratTourneeMSApplication.class, Jsr310JpaConverters.class})
 @EnableFeignClients(basePackages = {"fr.su.mentorataffectationportems", "fr.su.back"})
 @EnableCaching
 @OpenAPIDefinition(info = @Info(description = "Cette API...", contact = @Contact(email = "u-gie-iris-pole-sc-etudes-logistique@systeme-u.fr")))
 @SecurityScheme(name = "bearerAuth", type = SecuritySchemeType.HTTP, scheme = "bearer", bearerFormat = "JWT", in = SecuritySchemeIn.HEADER)
-public class MentoratAffectationPorteMsApplication extends SpringBootServletInitializer {
+public class MentoratTourneeMSApplication extends SpringBootServletInitializer {
 
 	@Autowired
 	Environment env;
@@ -42,7 +42,7 @@ public class MentoratAffectationPorteMsApplication extends SpringBootServletInit
 	private HeaderUtil headerUtil;
 
 	public static void main(String[] args) {
-		SpringApplication.run(MentoratAffectationPorteMsApplication.class, args);
+		SpringApplication.run(MentoratTourneeMSApplication.class, args);
 	}
 
 	/**

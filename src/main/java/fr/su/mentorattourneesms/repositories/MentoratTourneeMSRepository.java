@@ -8,12 +8,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Repository
-public class MentorataffectationportemsRepository extends AbstractRepository {
+public class MentoratTourneeMSRepository extends AbstractRepository {
 
     @PersistenceContext
     EntityManager entityManager;
 
-    Logger logger = LogManager.getLogger(MentorataffectationportemsRepository.class);
+    Logger logger = LogManager.getLogger(MentoratTourneeMSRepository.class);
 
     @Override
     protected Logger getLogger() {
