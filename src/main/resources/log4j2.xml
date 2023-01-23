@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+
+    <Properties>
+        <Property name="log-level">${env:LOG_LEVEL:-INFO}</Property>
+        <Property name="log-pattern">%d [%t]
+            [mentorataffectationportems,%X{X-B3-TraceId},%X{X-B3-SpanId},%X{X-Span-Export}] %-5p %c - %m%n
+        </Property>
+    </Properties>
+    <Appenders>
+
+        <!-- ***********************************************************************
+            Définition des appenders  applicatifs
+        *********************************************************************-->
+
+        <Console name="consoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="${log-pattern}"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+
+        <!-- ***********************************************************************
+            definition des loggers Applicatifs
+        *********************************************************************-->
+        <Logger name="fr.su.mentorataffectationportems" level="${log-level}" additivity="false">
+            <AppenderRef ref="consoleAppender"/>
+        </Logger>
+
+        <!-- ***********************************************************************
+            definition des loggers techniques
+        *********************************************************************-->
+        <Logger name="fr.su.out.osj.sutools" level="${log-level}" additivity="false">
+            <AppenderRef ref="consoleAppender"/>
+        </Logger>
+        <Logger name="fr.su.back" level="${log-level}" additivity="false">
+            <AppenderRef ref="consoleAppender"/>
+        </Logger>
+        <Logger name="fr.su.back.api.logging" level="${log-level}" additivity="false">
+            <AppenderRef ref="consoleAppender"/>
+        </Logger>
+        <Logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="${log-level}"
+                additivity="false">
+            <AppenderRef ref="consoleAppender"/>
+        </Logger>
+        <Logger name="org.hibernate.SQL" level="${log-level}" additivity="false">
+            <AppenderRef ref="consoleAppender"/>
+        </Logger>
+
+        <Logger name="org.hibernate.type" level="${log-level}" additivity="false">
+            <AppenderRef ref="consoleAppender"/>
+        </Logger>
+
+        <Logger name="org.springframework.web" level="${log-level}" additivity="false">
+            <AppenderRef ref="consoleAppender"/>
+        </Logger>
+
+        <!-- ***********************************************************************
+            definition du root pour ne pas perdre de logs
+        *********************************************************************-->
+        <Root level="${log-level}">
+            <AppenderRef ref="consoleAppender"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>

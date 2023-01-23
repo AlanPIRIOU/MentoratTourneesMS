@@ -1,0 +1,92 @@
+# Affichage des infos git dans /actuator/info
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    git:
+      mode: full
+    build:
+      enabled: 'true'
+  endpoint:
+    health:
+      show-details: when-authorized
+
+application:
+  ldap: 'Mentorat'
+# Comptes pour accéder aux endpoints d'administration de l'api
+security:
+  actuatorm:
+    name: ${ACTUATORM_USER}
+    password: ${ACTUATORM_PASSWORD}
+    roles: ${ACTUATORM_FUNCTIONS}
+  actuatorh:
+    name: ${ACTUATORH_USER}
+    password: ${ACTUATORH_PASSWORD}
+    roles: ${ACTUATORH_FUNCTIONS}
+  # Déclaration des configurations de comptes utilisables par authentification basique
+  accounts: actuatorh,actuatorm
+# Chargement automatique de toutes les informations de l'utilisateur à partir du LDAP (sinon, on se contente des informations fournies dans le jeton JWT)
+utilisateur:
+  chargement:
+    auto: 'false'
+# Chemin vers l'autorité d'authentification qui a signée le jeton JWT
+idm:
+  jwk:
+    uri: ${FORGEROCK_JWK_URI}
+# Chargement automatique des fonctions associées à l'utilisateur connecté (avec jeton JWT), pour l'application indiquée dans la propriété "application.ldap"
+fonctions:
+  chargement:
+    auto: 'false'
+cache:
+  iam-basic-auth:
+    activate: 'false'
+  iam-tokens:
+    activate: 'false'
+refutilisateurappli:
+  ws:
+    url: ${REF_UTILISATEUR_APPLI_URL}
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.DB2400Dialect
+    hibernate:
+      ddl-auto: validate
+    # Affichage des requetes SQL, désactivé par défaut
+    show-sql: ${HIBERNATE_SHOW_SQL:false}
+  flyway:
+    enabled: false
+    baseline-on-migrate: 'true'
+    user: ${FLYWAY_USERNAME}
+    password: ${FLYWAY_PASSWORD}
+  main:
+    allow-bean-definition-overriding: 'true'
+  datasource:
+    password: ${DATABASE_PASSWORD}
+    username: ${DATABASE_USERNAME}
+    url: ${DATABASE_URL}
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: 'false'
+  cache:
+    ehcache:
+      config: classpath:ehcache.xml
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+# Configuration Feign
+feign:
+  client:
+    config:
+      default:
+        logger-level: BASIC
+server:
+  # Prise en compte des entêtes X-Forwarded-Host et X-Forwarded-Proto ajoutée par le proxy
+  forward-headers-strategy: NATIVE
+  # Par défaut, le port est 8080 dans le conteneur
+  port: '8080'
+springdoc:
+  paths-to-exclude: /actuator/**
