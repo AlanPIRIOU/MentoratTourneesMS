@@ -1,4 +1,4 @@
-package fr.su.mentorataffectationportems;
+package fr.su.mentorattourneesms;
 
 import fr.su.back.api.security.AuthenticationConstantes;
 import fr.su.back.api.security.SecurityConfiguration;

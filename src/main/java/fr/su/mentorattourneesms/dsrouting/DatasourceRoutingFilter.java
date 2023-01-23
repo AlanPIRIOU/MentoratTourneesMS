@@ -1,4 +1,4 @@
-package fr.su.mentorataffectationportems.dsrouting;
+package fr.su.mentorattourneesms.dsrouting;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

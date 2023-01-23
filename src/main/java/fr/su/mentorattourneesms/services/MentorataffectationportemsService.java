@@ -1,6 +1,6 @@
-package fr.su.mentorataffectationportems.services;
+package fr.su.mentorattourneesms.services;
 
-import fr.su.mentorataffectationportems.repositories.MentorataffectationportemsRepository;
+import fr.su.mentorattourneesms.repositories.MentorataffectationportemsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

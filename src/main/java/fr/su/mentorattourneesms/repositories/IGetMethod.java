@@ -1,4 +1,4 @@
-package fr.su.mentorataffectationportems.repositories;
+package fr.su.mentorattourneesms.repositories;
 
 import javax.sql.rowset.CachedRowSet;
 import java.sql.SQLException;

@@ -1,4 +1,4 @@
-package fr.su.mentorataffectationportems.dsrouting;
+package fr.su.mentorattourneesms.dsrouting;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

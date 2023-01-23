@@ -1,4 +1,4 @@
-package fr.su.mentorataffectationportems.dsrouting;
+package fr.su.mentorattourneesms.dsrouting;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

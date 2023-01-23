@@ -1,4 +1,4 @@
-package fr.su.mentorataffectationportems;
+package fr.su.mentorattourneesms;
 
 import fr.su.back.api.headers.HeaderUtil;
 import fr.su.back.api.security.openapidoc.IrisOperationCustomizer;

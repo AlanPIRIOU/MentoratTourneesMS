@@ -23,7 +23,7 @@
         <!-- ***********************************************************************
             definition des loggers Applicatifs
         *********************************************************************-->
-        <Logger name="fr.su.mentorataffectationportems" level="${log-level}" additivity="false">
+        <Logger name="fr.su.mentorattourneesms" level="${log-level}" additivity="false">
             <AppenderRef ref="consoleAppender"/>
         </Logger>
 

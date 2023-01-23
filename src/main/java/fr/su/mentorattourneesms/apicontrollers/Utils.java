@@ -1,4 +1,4 @@
-package fr.su.mentorataffectationportems.apicontrollers;
+package fr.su.mentorattourneesms.apicontrollers;
 
 public class Utils {
 

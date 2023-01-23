@@ -1,6 +1,6 @@
-package fr.su.mentorataffectationportems.apicontrollers;
+package fr.su.mentorattourneesms.apicontrollers;
 
-import fr.su.mentorataffectationportems.services.MentorataffectationportemsService;
+import fr.su.mentorattourneesms.services.MentorataffectationportemsService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
